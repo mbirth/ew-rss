@@ -1,0 +1,4 @@
+RewriteEngine on
+#RewriteBase /BassDriveRSS
+
+RewriteRule index.rss2$ genfeed.php?type=rss2
