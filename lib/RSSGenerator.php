@@ -99,6 +99,11 @@ class RSSGenerator
         $channel->appendChild($dom->createElement('webMaster', $this->global_conf['config']['webmaster']));
         $channel->appendChild($dom->createElement('ttl', $this->global_conf['config']['caching_ttl']));
         
+        $i_owner = $dom->createElement('itunes:owner');
+        $i_owner->appendChild($dom->createElement('itunes:name', $this->global_conf['config']['itunes_owner_name']));
+        $i_owner->appendChild($dom->createElement('itunes:email', $this->global_conf['config']['itunes_owner_email']));
+        $channel->appendChild($i_owner);
+        
         $skipDays = $dom->createElement('skipDays');
         $days_on = explode(',', $this->show_conf['show']['schedule_days']);
         if (!in_array('Mo', $days_on)) {
