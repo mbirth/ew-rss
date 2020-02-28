@@ -94,7 +94,7 @@ class RSSGenerator
         
         $channel->appendChild($dom->createElement('lastBuildDate', date(self::RFC_822)));
         $channel->appendChild($dom->createElement('docs', 'http://blogs.law.harvard.edu/tech/rss'));
-        $channel->appendChild($dom->createElement('generator', 'ew-rss 2020-02-15 by Markus Birth'));
+        $channel->appendChild($dom->createElement('generator', 'ew-rss 2020-02-29 by Markus Birth'));
         $channel->appendChild($dom->createElement('managingEditor', $this->global_conf['config']['managing_editor']));
         $channel->appendChild($dom->createElement('webMaster', $this->global_conf['config']['webmaster']));
         $channel->appendChild($dom->createElement('ttl', $this->global_conf['config']['caching_ttl']));
